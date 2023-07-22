@@ -1,0 +1,36 @@
+GET http://localhost:3001/citas
+#################################
+
+POST http://localhost:3001/citas
+Content-Type: application/json
+
+{
+    "id": 2,
+    "diaSemana": "",
+    "inicio": "",
+    "fin": "",
+    "enlace": "",
+    "idDocente": 1,
+    "idEstudiante": 1
+}
+
+###########################
+
+PUT http://localhost:3001/citas
+Content-Type: application/json
+
+{
+    "id": 2,
+    "diaSemana": "a",
+    "inicio": "",
+    "fin": "",
+    "enlace": "",
+    "idDocente": 1,
+    "idEstudiante": 2
+}
+
+##########################
+GET http://localhost:3001/citas/2
+####################################
+
+DELETE http://localhost:3001/citas/2

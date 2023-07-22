@@ -1,0 +1,53 @@
+GET http://localhost:3001/docentes
+#######################################
+
+POST http://localhost:3001/docentes
+Content-Type: application/json
+
+{
+    "id": 2,
+    "correo": "A",
+    "contrasenna": "",
+    "nombres": "",
+    "apellidos": "",
+    "tipoDoc": "",
+    "nroDoc": 0,
+    "rol": "",
+    "foto": "",
+    "usuario": "",
+    "universidad": "",
+    "carrera": "",
+    "cursos": [],
+    "titulo": "",
+    "presentacion": "",
+    "citas": []
+}
+#####################################
+
+PUT http://localhost:3001/docentes/
+Content-Type: application/json
+
+{
+    "id": 2,
+    "correo": "B",
+    "contrasenna": "",
+    "nombres": "",
+    "apellidos": "",
+    "tipoDoc": "",
+    "nroDoc": 0,
+    "rol": "",
+    "foto": "",
+    "usuario": "",
+    "universidad": "",
+    "carrera": "",
+    "cursos": [],
+    "titulo": "",
+    "presentacion": "",
+    "citas": []
+}
+#############################################
+
+GET http://localhost:3001/docentes/2
+################################################
+
+DELETE http://localhost:3001/docentes/2
