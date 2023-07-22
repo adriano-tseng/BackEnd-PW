@@ -10,14 +10,17 @@ import cursoRoutes from './src/routes/curso.js'
 import calificacionRoutes from './src/routes/calificacion.js'
 import horarioRoutes from './src/routes/horario.js'
 import universidadRoutes from './src/routes/universidad.js'
+import authRoutes from './src/routes/auth.js'
 //
-const PORT = process.env.PORT || 3000
+const PORT = 8080
 
 let app = express();
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({
     extended : true
 }))
+
 app.use(cors({
     origin : "*"
 }))
@@ -37,6 +40,7 @@ app.use("/calificacion", calificacionRoutes);
 app.use("/curso", cursoRoutes);
 app.use("/horario", horarioRoutes);
 app.use("/universidad", universidadRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(PORT, () => {
     console.log('Servidor iniciado.');

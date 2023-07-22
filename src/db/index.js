@@ -21,6 +21,14 @@ export const Usuario = sequelize.define("usuario", {
         type : DataTypes.INTEGER,
         allowNull : false
     },
+    email : {
+        type : DataTypes.STRING(50),
+        allowNull : false
+    },
+    password : {
+        type : DataTypes.STRING(50),
+        allowNull : false
+    },
     nombres : {
         type : DataTypes.STRING(50),
         allowNull : false

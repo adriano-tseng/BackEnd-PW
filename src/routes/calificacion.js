@@ -5,5 +5,6 @@ const router = express.Router()
 
 router.get("/", CalificacionController.findAll);
 router.post("/", CalificacionController.create);
+router.post("/ranking", CalificacionController.ranking);
 
 export default router;

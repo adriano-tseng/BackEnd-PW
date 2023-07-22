@@ -10,6 +10,17 @@ const create = async (calificacion) =>{
     return nuevoCal;
 }
 
-const CalificacionRepository = {findAll, create}
+const ranking = async () =>{
+    const listaRanking = await Calificacion.findAll({
+        attributes: ['usuario_id', [sequelize.fn('AVG', sequelize.col('calificacion')), 'promedio_calificacion']],
+        group: ['usuario_id'],
+        order: [[sequelize.fn('AVG', sequelize.col('calificacion')), 'DESC']],
+        include: [{ model: Usuario, attributes: ['id', 'nombres', 'apellidos'] }]
+    });
+
+    return listaRanking;
+}
+
+const CalificacionRepository = {findAll, create, ranking}
 
 export default CalificacionRepository;

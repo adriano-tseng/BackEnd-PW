@@ -12,6 +12,13 @@ const create = async (req, res) =>{
     return sendResponse(result, res);
 }
 
+const ranking = async (req, res) =>{
+
+    const result = await CalificacionRepository.ranking();
+
+    return sendResponse(result, res);
+}
+
 const sendResponse = (result, res) => {
     if (result)
         return res.status(200).json(result);
@@ -19,6 +26,6 @@ const sendResponse = (result, res) => {
         return res.status(500).json({ message: 'Ha ocurrido un error'})
 }
 
-const CalificacionController = {findAll, create}
+const CalificacionController = {findAll, create, ranking}
 
 export default CalificacionController;
