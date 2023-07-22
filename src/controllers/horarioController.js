@@ -26,6 +26,6 @@ const sendResponse = (result, res) => {
         return res.status(500).json({ message: 'Ha ocurrido un error'})
 } 
 
-const HorarioRepository = {findAll, create, remove}
+const HorarioController = {findAll, create, remove}
 
-export default HorarioRepository;
+export default HorarioController;

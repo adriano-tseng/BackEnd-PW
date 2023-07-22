@@ -12,6 +12,6 @@ const sendResponse = (result, res) => {
         return res.status(500).json({ message: 'Ha ocurrido un error'})
 } 
 
-const UniversidadRepository = {findAll}
+const UniversidadController = {findAll}
 
-export default UniversidadRepository;
+export default UniversidadController;
